@@ -8,4 +8,4 @@ in my_list and print it
 
 
 def print_list_integer(my_list=[]):
-    [print(x) for x in my_list]
+    [print("{}".format(x)) for x in my_list]
