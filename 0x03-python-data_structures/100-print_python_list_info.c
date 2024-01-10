@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <Python.h>
 #include <string.h>
+#include <object.h>
+#include <listobject.h>
 
 /**
  * Description: Prints information about a Python list, including its size,
