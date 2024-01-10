@@ -10,16 +10,22 @@
  *
  * @p: Pointer to a PyObject representing a Python list
  */
+
 void print_python_list_info(PyObject *p)
 {
-	int i;
+	PyListObject *obj = (PyListObject *)p;
+	ssize_t i, size = PyList_Size(p);
 
-	printf("[*] Size of the Python List = %d\n", (int)PyList_Size(p));
-	printf("[*] Allocated = %d\n", (int)(((PyListObject *)p)->allocated));
+	/* Print the size of the Python list */
+	printf("[*] Size of the Python List = %ld\n", size);
 
-	for (i = 0; i < (int)PyList_Size(p); i++)
+	/* Print the allocated space for the list */
+	printf("[*] Allocated = %ld\n", obj->allocated);
+
+	/* Iterate through the elements of the list */
+	for (i = 0; i < size; i++)
 	{
-		printf("Element %d: %s\n", i, PyList_GetItem(p, i)->ob_type->tp_name);
+		/* Print the type name of each element */
+		printf("Element %ld: %s\n", i, Py_TYPE(obj->ob_item[i])->tp_name);
 	}
-
 }
