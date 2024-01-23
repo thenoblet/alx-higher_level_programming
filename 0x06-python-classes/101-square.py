@@ -9,7 +9,7 @@ class Square:
     """
     A blueprint for working with squares
     """
-    
+
     def __init__(self, size=0, position=(0, 0)):
         """
         Initializes the Square class
