@@ -6,7 +6,6 @@
 class Node:
     """Blueprint for the node"""
 
-
     def __init__(self, data, next_node=None):
         """
         Creates a new node
