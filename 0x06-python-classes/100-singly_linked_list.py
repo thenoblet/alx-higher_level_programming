@@ -41,7 +41,8 @@ class Node:
 
     @data.setter
     def data(self, value):
-         """Sets or updates the data part of a node"""
+        """Sets or updates the data part of a node"""
+
         if type(value) is not int:
             raise TypeError("data must be an integer")
         self.__data = value
