@@ -3,7 +3,7 @@
 """Solves the N-Queens challenge."""
 
 
-def n_queens(n: int) -> "list[list[list[int]]]":
+def n_queens(n):
     """
     Solves the N-Queens challenge.
 
@@ -15,7 +15,7 @@ def n_queens(n: int) -> "list[list[list[int]]]":
         non-attacking positions.
     """
 
-    def is_non_attack(board: list, row: int, col: int) -> bool:
+    def is_non_attack(board, row, col):
         """
         Checks whether a slot is non-attacking when a Queen is placed.
 
@@ -38,7 +38,7 @@ def n_queens(n: int) -> "list[list[list[int]]]":
 
         return True
 
-    def insert_queen(board: list, row: int) -> None:
+    def insert_queen(board, row):
         """
         Handles the placement of Queens in a non-attacking fashion.
 
@@ -63,7 +63,7 @@ def n_queens(n: int) -> "list[list[list[int]]]":
     return chessboard
 
 
-def print_non_attack_combinations(chessboard: "list[list[list[int]]]") -> None:
+def print_non_attack_combinations(chessboard):
     """
     Prints all the non-attacking combinations of N-Queens.
 
