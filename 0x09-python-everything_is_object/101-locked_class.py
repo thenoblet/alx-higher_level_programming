@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 class LockedClass:
     """
     A class demonstrating the use of __slots__ to restrict attribute creation.
