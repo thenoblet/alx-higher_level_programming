@@ -1,23 +1,2 @@
-# Title
+# 0x09. Python - Everything is object
 
-## 
-
-### Description
-
-This project is about 
-
-### Mandatory Tasks
-
-| File | Description |
-| ------ | ------ |
-| []() |  |
-
-### Advanced Tasks
-
-| File | Description |
-| ------ | ------ |
-| []() |  |
-
-## Author
-
-[]()
