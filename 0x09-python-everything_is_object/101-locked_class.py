@@ -9,7 +9,8 @@ class LockedClass:
     Note:
     The __slots__ attribute is used to explicitly declare a list of allowed
     ittribute names.
-    Instances of this class will only be able to have attributes listed in __slots__.
+    Instances of this class will only be able to have attributes listed
+    in __slots__.
     This can be useful for memory optimization and to prevent the creation of
     arbitrary attributes.
     """
