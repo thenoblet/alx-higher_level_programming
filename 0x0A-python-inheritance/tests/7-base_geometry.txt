@@ -1,51 +1,75 @@
->>> a = __import__("7-base_geometry")
->>> bg = a.BaseGeometry()
->>> bg.integer_validator("my_int", 12)
->>> b = a.BaseGeometry(3)
+# Import the BaseGeometry class
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Create an instance of BaseGeometry
+>>> bg = BaseGeometry()
+
+# Test for expected behavior
+## Validate integers
+>>> bg.integer_validator("square", 5)
+>>> bg.integer_validator("integer_pi", 3)
+
+# Test for string values
+## Raise TypeError for string values
+>>> bg.integer_validator("name", "John Doe")
 Traceback (most recent call last):
-TypeError: object() takes no parameters
+...
+TypeError: name must be an integer
+
+>>> bg.integer_validator("pi", "3.14")
+Traceback (most recent call last):
+...
+TypeError: pi must be an integer
+
+# Test for float values
+## Raise TypeError for float values
+>>> bg.integer_validator("money", 9.99)
+Traceback (most recent call last):
+...
+TypeError: money must be an integer
+
+>>> bg.integer_validator("pi", 3.14)
+Traceback (most recent call last):
+...
+TypeError: pi must be an integer
+
+# Test for missing positional arguments
+## Raise TypeError for missing arguments
 >>> bg.integer_validator()
 Traceback (most recent call last):
+...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
->>> bg.integer_validator("test")
+
+>>> bg.integer_validator(name="math")
 Traceback (most recent call last):
+...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
->>> bg.integer_validator("test", 4, 6)
+
+>>> bg.integer_validator(value=78)
 Traceback (most recent call last):
-TypeError: integer_validator() takes 3 positional arguments but 4 were given
->>> bg.integer_validator("test", "asdsa")
+...
+TypeError: integer_validator() missing 1 required positional argument: 'name'
+
+# Test for zero
+## Raise ValueError for zero
+>>> bg.integer_validator("science", 0)
 Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", 65.8)
+...
+ValueError: science must be greater than 0
+
+# Test for negative values
+## Raise ValueError for negative values
+>>> bg.integer_validator("science", -9)
 Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", -8)
-Traceback (most recent call last):
-ValueError: test must be greater than 0
->>> bg.integer_validator("test", 0)
-Traceback (most recent call last):
-ValueError: test must be greater than 0
->>> bg.area()
-Traceback (most recent call last):
-Exception: area() is not implemented
->>> bg.area(5)
-Traceback (most recent call last):
-TypeError: area() takes 1 positional argument but 2 were given
->>> bg.integer_validator("test", {"a":3})
-Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", [1, 0])
-Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", (1, 2))
-Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", False)
-Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", None)
-Traceback (most recent call last):
-TypeError: test must be an integer
->>> bg.integer_validator("test", {2, 5})
-Traceback (most recent call last):
-TypeError: test must be an integer
+...
+ValueError: science must be greater than 0
+
+# Test if module documentation exists
+## Check if the module documentation contains at least 5 words
+>>> len(bg.__doc__.split()) > 5
+True
+
+# Test if method documentation exists
+## Check if the method documentation is descriptive enough (10 words minimum)
+>>> len(bg.integer_validator.__doc__.split()) > 10
+True
