@@ -12,6 +12,4 @@ class MyList(list):
         """
         Function that prints a list sorted.
         """
-        list2 = self.copy()
-        list2.sort()
-        print(list2)
+        print(sorted(self))
