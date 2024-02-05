@@ -1,16 +1,17 @@
-# Import the BaseGeometry class
+==== This file tests the integer_validator() method of the BaseGeometry class.
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-# Create an instance of BaseGeometry
+==== Test for expected behaviour ====
+
 >>> bg = BaseGeometry()
 
-# Test for expected behavior
-## Validate integers
 >>> bg.integer_validator("square", 5)
 >>> bg.integer_validator("integer_pi", 3)
 
-# Test for string values
-## Raise TypeError for string values
+
+==== Test for string as values ====
+
 >>> bg.integer_validator("name", "John Doe")
 Traceback (most recent call last):
 ...
@@ -21,8 +22,9 @@ Traceback (most recent call last):
 ...
 TypeError: pi must be an integer
 
-# Test for float values
-## Raise TypeError for float values
+
+==== Test for floats as values ====
+
 >>> bg.integer_validator("money", 9.99)
 Traceback (most recent call last):
 ...
@@ -33,8 +35,9 @@ Traceback (most recent call last):
 ...
 TypeError: pi must be an integer
 
-# Test for missing positional arguments
-## Raise TypeError for missing arguments
+
+==== Test for missing positional arguments ====
+
 >>> bg.integer_validator()
 Traceback (most recent call last):
 ...
@@ -50,26 +53,29 @@ Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'name'
 
-# Test for zero
-## Raise ValueError for zero
+==== Test for zero ====
+
 >>> bg.integer_validator("science", 0)
 Traceback (most recent call last):
 ...
 ValueError: science must be greater than 0
 
-# Test for negative values
-## Raise ValueError for negative values
+==== Test for negative values ====
+
 >>> bg.integer_validator("science", -9)
 Traceback (most recent call last):
 ...
 ValueError: science must be greater than 0
 
-# Test if module documentation exists
-## Check if the module documentation contains at least 5 words
+==== Test if module documentation exist ====
+
+# At least the documentation should contain 5 words
+
 >>> len(bg.__doc__.split()) > 5
 True
 
-# Test if method documentation exists
-## Check if the method documentation is descriptive enough (10 words minimum)
+==== Test if method documentation exist ====
+
+# The method documentation should be descriptive enough, 10 words minimum is okay
 >>> len(bg.integer_validator.__doc__.split()) > 10
 True
