@@ -1,7 +1,10 @@
 >>> MyList = __import__('1-my_list').MyList
 
+========== TESTS ================
 
-==== Instantiate and use (Expected general use) ====
+=================================
+==== Instantiation and usage ====
+=================================
 
 >>> my_list = MyList()
 >>> my_list.append(4)
@@ -22,16 +25,18 @@
 >>> my_list
 [4, 1, 2, 3]
 
-
-==== Another way of instantiating the list ====
-
 >>> my_list2 = MyList([10, 3, 34, 2, 10, -1])
 >>> my_list2
 [10, 3, 34, 2, 10, -1]
 >>> my_list2.print_sorted()
 [-1, 2, 3, 10, 10, 34]
 
-
+=============================
+==== Test for empty list ====
+=============================
+>>> empty = MyList()
+>>> empty.print_sorted()
+[]
 ==== Perform slicing ====
 
 >>> my_list[0:2]
@@ -128,15 +133,6 @@ TypeError: 'int' object is not iterable
 [-98, -4, -2, -1, -9, -3, -5]
 
 
-==== Test same numbers ====
-
 >>> same_numbers = MyList([0, 0, 0, 0])
 >>> same_numbers.print_sorted()
 [0, 0, 0, 0]
-
-
-==== Test empty list ====
-
->>> empty = MyList()
->>> empty.print_sorted()
-[]
