@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""
-This module contains the class BaseGeometry.
-"""
+
+
+"""This module contains the class BaseGeometry."""
 
 
 class BaseGeometry:
-    """
-    Class that defines basic geometries.
-    """
+    """A base class for geometry shapes."""
 
     def area(self):
         """
