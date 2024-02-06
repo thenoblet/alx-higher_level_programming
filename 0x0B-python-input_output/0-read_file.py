@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-This module contains the function read_file.
-"""
+
+"""This module contains the function read_file."""
 
 
 def read_file(filename=""):
@@ -14,5 +13,5 @@ def read_file(filename=""):
     Returns:
     None
     """
-    with open(filename, 'r', encoding='utf-8') as f:
-            print(f.read(), end="")
+    with open(filename, 'r', encoding='utf-8') as file:
+            print(file.read(), end="")
