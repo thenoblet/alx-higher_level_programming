@@ -3,7 +3,7 @@
 """Model that contains a function that writes or overwrites to a file."""
 
 
-def write_file(filename="", text""):
+def write_file(filename="", text=""):
     """
     Writes or overwrites text to a specified file.
 
