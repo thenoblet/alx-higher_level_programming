@@ -6,7 +6,7 @@ This module contains the function read_lines.
 
 def append_write(filename="", text=""):
     """
-    Appends text to the end of the specified file or creates the file 
+    Appends text to the end of the specified file or creates the file
     if it doesn't exist.
 
     Parameters:
