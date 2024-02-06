@@ -6,7 +6,13 @@ This module contains the function read_file.
 
 def read_file(filename=""):
     """
-    Function that reads the contents of a file.
+    Reads and prints the contents of the specified file.
+
+    Parameters:
+    - filename (str): The name of the file to read.
+
+    Returns:
+    None
     """
     with open(filename, 'r', encoding='utf-8') as f:
             print(f.read(), end="")
