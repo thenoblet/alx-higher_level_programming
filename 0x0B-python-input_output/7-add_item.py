@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Script that stores arguments as json representations in file add_item.json.
 """
