@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-# This script Lists states with a given name.
+
+"""This script takes in an argument and displays all values in the `states`
+table of the database `hbtn_0e_0_usa` where the `name` matches the argument."""
+
 import MySQLdb
 import sys
 if __name__ == "__main__":
