@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 """ Selecting specified state. """
+
 import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
