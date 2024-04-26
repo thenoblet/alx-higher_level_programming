@@ -18,7 +18,7 @@ if __name__ == "__main__":
         utf8_content = response_body.decode('utf-8')
 
     # Displaying the body of the response with tabulation
-    print("- Body response:")
+    print("Body response:")
     print("\t- type:", type(response_body))
     print("\t- content:", response_body)
     print("\t- utf8 content:", utf8_content)
