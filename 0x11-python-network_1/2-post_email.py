@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+"""
+Module to send a POST request with email as a parameter to a given URL.
+
+This module contains functionality to send a POST request with an email parameter to
+a URL provided as a command-line argument along with the email address.
+"""
+
 import urllib.parse
 import urllib.request
 import sys
