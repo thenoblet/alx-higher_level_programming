@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module for finding a peak in a list of unsorted integers."""
+
 
 def find_peak(list_of_integers) -> "int | None":
     """Finds a peak in a list of unsorted integers using binary search.
