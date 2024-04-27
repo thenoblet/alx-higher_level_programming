@@ -5,7 +5,7 @@ Module to send a POST request with email as a parameter to a
 URL using requests.
 
 This module contains functionality to send a POST request with an
-email parameter to a URL provided as a command-line argument along 
+email parameter to a URL provided as a command-line argument along
 with the email address using the requests library.
 
 Dependencies:
