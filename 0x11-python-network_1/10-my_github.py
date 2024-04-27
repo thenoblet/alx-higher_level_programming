@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """
-Script to fetch user ID from GitHub using Basic Authentication
-with a personal access token
+Module to retrieve the GitHub user ID using the provided username and password.
+
+This module retrieves the GitHub user ID by sending a GET request to the GitHub API
+with the provided username and password for authentication.
 """
 
 import requests
@@ -18,7 +20,5 @@ if __name__ == "__main__":
 
     if response.status_code == 200:
         print(response.json().get('id'))
-        # user_id = user_data.get('id')
-        # print(user_id)
     else:
         print(None)
