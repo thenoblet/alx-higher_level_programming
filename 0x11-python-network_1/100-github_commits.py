@@ -8,7 +8,7 @@ specified by the repository name and owner name provided
 as command-line arguments.
 
 Usage:
-     <repo_name> <owner_name>
+     ./100-github_commits.py <repo_name> <owner_name>
 """
 
 import requests
